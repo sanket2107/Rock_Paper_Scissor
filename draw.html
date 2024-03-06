@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="common.css" />
+</head>
+<body>
+    <div class="head1">
+        <div class="write">ROCK <br>PAPER<br>SCISSOR</div>
+        <div class="score">COMPUTER<br>SCORE <p id="comp-score">0</p></div>
+        <div class="score">YOUR<br>SCORE <p id="user-score">0</p></div>
+
+    </div>
+    <div class="fi">Tie Up</div>
+    <button class="but">Replay</button>
+    <p class="ru"></p>
+    <button class="rule">Rules</button>
+    <script>
+        var rule=document.querySelector(".rule");
+
+let h1=document.querySelector(".ru");
+
+var again=document.querySelector(".but");
+
+var nex=document.querySelector(".next");
+rule.addEventListener("click",function(){
+    var poe=" Games Rules \n\n1 Rock beats scissors, scissors beat \npaper, and paper beats rock.\n\n2 Agree ahead of time whether you’ll\n count off “rock, paper, scissors, shoot” \nor just “rock, paper, scissors.”\n\n3 Use rock, paper, scissors to settle\n minor decisions or simply play to pass\n the time\n\n4 If both players lay down the same hand,\n each player lays down another hand ";
+    
+    h1.innerHTML="<pre>" + poe + "</pre>";
+    
+});
+
+again.addEventListener("click",function(){
+    window.location.assign("index.html");
+});
+
+nex.addEventListener("click",function(){
+    window.location.assign("win.html");
+});
+    </script>
+</body>
+</html>
